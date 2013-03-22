@@ -13,5 +13,7 @@
 //= require jquery
 //= require underscore
 //= require backbone
+//= require backbone.sync.rails
+//= require backbone.modelbinder
 //= require backbone.marionette
 //= require_tree .
