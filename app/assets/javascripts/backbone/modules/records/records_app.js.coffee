@@ -9,5 +9,5 @@
 			RecordsApp.List.Controller.listRecords()
 	
 	App.addInitializer ->
-		new RecordsApp.Router
-			controller: API
+  	new RecordsApp.Router
+  		controller: API

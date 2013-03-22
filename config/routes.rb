@@ -5,6 +5,8 @@ MoneyRotationProject::Application.routes.draw do
   end
   
   devise_for :users
-
-	root to: "application#index"
+  
+  get "interface" => "interface#index"
+  
+	root to: "home#index"
 end
