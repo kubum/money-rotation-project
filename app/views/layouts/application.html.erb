@@ -8,7 +8,24 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="wrap">
+  	<div id="header-region"></div>
+  	<div id="main-region" class="container"></div>
+  	<div id="push"></div>
+  </div>
+  <div id="footer-region"></div>
+  
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript">
+    <% if signed_in? -%>
+      // Page.currentUser = new Page.Models.User(<%= current_user.to_json.html_safe %>);
+    <% else -%>
+      // Page.currentUser = null;
+    <% end -%>
+    Page.start({
+      currentUser: null
+    });
+  </script>
 
 </body>
 </html>

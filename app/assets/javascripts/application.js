@@ -16,4 +16,8 @@
 //= require backbone.sync.rails
 //= require backbone.modelbinder
 //= require backbone.marionette
-//= require_tree .
+//= require_tree ./backbone/config
+//= require backbone/app
+//= require_tree ./backbone/entities
+//= require_tree ./backbone/views
+//= require_tree ./backbone/modules

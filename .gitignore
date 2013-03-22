@@ -10,3 +10,5 @@
 
 # Ignore ChromeDriver log
 chromedriver.log
+
+.DS_STORE

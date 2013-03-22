@@ -1,0 +1,2 @@
+<td><%= @comment %></td>
+<td><%= @amount %></td>
