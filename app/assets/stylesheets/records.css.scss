@@ -14,4 +14,36 @@
         float: right;
         margin-bottom: 10px;
     }
+    
+    #add_form {
+        display: none;
+        width: 300px;
+        margin: 0 auto;
+        padding: 2px 20px 2px 20px;
+        margin-bottom: 20px;
+        background: #E6E6E6;
+        
+        form {
+            .success, .errors {
+                display: none;    
+
+                h4 {
+                    margin-bottom: 5px;
+                }
+            }
+            .success {
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            .errors {
+                ul {
+                    margin-bottom: 0;
+                }
+            }            
+            input[type="text"] {
+                width: 285px;
+            }
+        }
+    }
 }
