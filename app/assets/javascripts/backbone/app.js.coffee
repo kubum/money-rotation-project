@@ -18,15 +18,17 @@
     mainRegion: "#main-region"
     footerRegion: "#footer-region"
   
-  App.addInitializer ->
-    App.module("HeaderApp").start()
-    App.module("FooterApp").start()
+  # App.addInitializer ->
+  #
   
-  App.on "initialize:after", (options) ->
+  App.on "initialize:after", (options) ->    
     if Backbone.history
       Backbone.history.start()
             
       @navigate(@rootRoute, trigger: true) if @getCurrentRoute() is ""
+
+    App.module("HeaderApp").start()
+    App.module("FooterApp").start()
 
   App
 
