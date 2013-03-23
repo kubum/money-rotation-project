@@ -10,6 +10,7 @@
 			new Entities.HeaderCollection [
 				{ name: "Records", url: "records" }
 				{ name: "Statistics", url: "statistics" }
+				{ name: "Account", url: "account" }
 			]
 	
 	App.reqres.addHandler "header:entities", ->
