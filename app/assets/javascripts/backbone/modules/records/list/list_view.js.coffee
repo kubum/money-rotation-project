@@ -10,6 +10,9 @@
   
   class List.Panel extends App.Views.ItemView
     template: "records/list/templates/_panel"
+    
+    initialize: ->
+      @collection.on('sync', @render, @)
   
   class List.Record extends App.Views.ItemView
     template: "records/list/templates/_record"
