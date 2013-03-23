@@ -1,21 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
 body {
     padding-top: 40px;
     padding-bottom: 40px;
-    background: url('../assets/retina_wood.png');
+    background: url('../assets/wood_pattern.png');
+}
+a {
+    text-decoration: underline;
+    color: #5A5A5A;
+}
+a:hover {
+    text-decoration: none;
+    color: #686868;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+// Header
+#header {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    h1 {
+        color: #404040;
+        font-size: 3em;
+        margin-bottom: 0px;
+    }
+    h2 {
+        margin-top: 0px;
+        line-height: 1em;
+        font-size: 1em;
+        color: #6D6D6B;
+    }
+}
+
+// Alerts
+.alerts {
+    margin: 0 auto;
+    width: 415px;
+    
+    .alert {
+        padding-left: 30px;
+    }
 }
 
 // Border
-.new_user, #links {
+.new_user, #links, .alerts {
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-            box-shadow: 0 1px 2px rgba(0,0,0,.05);
-            
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    padding: 0 29px;
+    -webkit-box-shadow: 8px 8px 8px rgba(0,0,0,0.1);
+       -moz-box-shadow: 8px 8px 8px rgba(0,0,0,0.1);
+            box-shadow: 8px 8px 8px rgba(0,0,0,0.1);
+}
+
+.new_user, #links {
+    background-color: #F9F9F9;
+    padding: 0 30px;
 }
 
 // Devise errors

@@ -13,21 +13,35 @@
   <div class="container">
     <div id="<%= controller.controller_name %>_<%= controller.action_name %>">
       
-      <% unless notice.blank? %>
-        <div class="alert alert-success">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= notice %>
-        </div>
-      <% end %>
+      <div id="header">
+        <h1>MoneyRotation</h1>
+        <h2>Minimalistic budget tracking application</h2>
+      </div>
       
-      <% unless alert.blank? %>
-        <div class="alert alert-error">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= alert %>
+      <div id="main">
+        <% if !notice.blank? || !alert.blank? %>
+        <div class="alerts">
+          <% unless notice.blank? %>
+            <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <%= notice %>
+            </div>
+          <% end %>
+      
+          <% unless alert.blank? %>
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <%= alert %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+        <% end %>
                    
-      <%= yield %>
+        <%= yield %>
+      </div>
+      <div id="footer">
+        yy
+      </div>
     </div>
   </div>  
 </body>
