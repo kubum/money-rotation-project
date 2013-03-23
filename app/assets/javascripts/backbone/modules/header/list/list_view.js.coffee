@@ -19,3 +19,9 @@
     template: "header/list/templates/headers"
     itemView: List.Header
     itemViewContainer: "#navigation div"
+    events:
+      'click #logout': 'logout'
+      
+    logout: ->
+      window.location = "/users/sign_out"
+    

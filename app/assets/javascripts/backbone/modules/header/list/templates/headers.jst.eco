@@ -1,4 +1,7 @@
 <div class="decoration"></div>
+
+<div id="logout">Logout</div>
+
 <div id="header">
     <h1>MoneyRotation</h1>
     <h2>Simple budget tracking application</h2>

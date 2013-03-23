@@ -4,7 +4,7 @@ MoneyRotationProject::Application.routes.draw do
     resources :records
   end
   
-  devise_for :users, :skip => [:passwords] 
+  devise_for :users #, :skip => [:passwords] 
   
   get "interface" => "interface#index"
   
