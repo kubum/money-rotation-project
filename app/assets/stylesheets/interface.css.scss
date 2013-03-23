@@ -1,24 +1,26 @@
-// @import "compass/css3/border-radius"
+@import "compass/css3";
 
+#header {
+    margin-top: 20px;
+}
 #navigation {
     text-align: center;
-    margin-top: 20px;
-    
-    ul {
-        margin-bottom: 0px;
-    }
+    margin-top: 20px;    
 }
 
 #logout {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 25px;
     
     cursor: pointer;
     background: #000000;
     color: #E5E5E5;
     font-size: 0.8em;
-    padding: 2px 5px;
+    padding: 4px 8px;
     
-    // @include border-radius(5px);
+    @include border-radius(5px);
 }
+    #logout:hover {
+        background: #434343;
+    }
