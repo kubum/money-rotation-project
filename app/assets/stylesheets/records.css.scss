@@ -12,15 +12,29 @@
     
     #add_button {
         float: right;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    
+    #add_success, #add_form {
+        display: none;
+        width: 300px;
+        margin: 0 auto;    
+    }
+    
+    #add_success {   
+        // display: block; 
+            
+        span {
+            font-weight: bold;
+        }
+        p {
+            margin: 0px;
+        }
     }
     
     #add_form {
-        display: none;
-        width: 300px;
-        margin: 0 auto;
-        padding: 2px 20px 2px 20px;
         margin-bottom: 20px;
+        padding: 2px 20px 2px 20px;
         background: #E6E6E6;
         
         form {

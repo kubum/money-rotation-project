@@ -1,24 +1,23 @@
 <div id="add_button">
-    <button class="btn btn-success btn-small" type="button">Add record</button>
+    <button class="btn btn-success btn" type="button">Add record</button>
+</div>
+
+
+<div id="add_success" class="success alert alert-success">
+    <span>Success!</span> Record was successfully added
 </div>
 
 <div id="add_form" class="region">
     <h3>Add record</h3>
 
-    <form id="new_entry">
+    <form id="new_record">
         <div class="errors alert alert-error">
             <h4>Errors!</h4>
             <ul></ul>
         </div>
 
-        <div class="success alert alert-success">
-            <h4>Success!</h4>
-            <p>Record was successfully added</p>
-        </div>
-
-        <input type="text" name="title" id="new_entry_title" placeholder="Spend for" />
-
-        <input type="text" name="amount" id="new_entry_amount" placeholder="Amount (&pound;)" />
+        <input type="text" name="comment" id="new_record_comment" placeholder="Spend for" />
+        <input type="text" name="amount" id="new_record_amount" placeholder="Amount (&pound;)" />
 
         <input type="submit" value="Add" class="btn" />
     </form>

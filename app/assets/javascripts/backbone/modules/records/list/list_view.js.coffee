@@ -11,30 +11,6 @@
   class List.Panel extends App.Views.ItemView
     template: "records/list/templates/_panel"
   
-  class List.AddRecord extends App.Views.ItemView
-    template: "records/list/templates/_add"
-    events:
-      'click #add_button': 'showAddRecordForm'
-      'click': 'hideAddRecordForm'
-    
-    showAddRecordForm: (e) ->
-      e.stopPropagation()
-      
-      @touchButton()
-      @toggleForm()
-      
-    hideAddRecordForm: (e) ->
-      container = $("#add_form")
-      
-      @touchButton()
-      @toggleForm() if container.is(":visible") && container.has(e.target).length == 0        
-        
-    touchButton: ->
-      $("#add_button button").toggleClass("active")
-    
-    toggleForm: ->
-      $("#add_form").toggle("fast")
-  
   class List.Record extends App.Views.ItemView
     template: "records/list/templates/_record"
     tagName: "tr"

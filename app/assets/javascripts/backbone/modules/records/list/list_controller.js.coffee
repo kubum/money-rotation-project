@@ -8,14 +8,14 @@
         @layout = @getLayoutView()
       
         @layout.on "show", =>
-          @showAddRecord()
+          @showAddRecord records
           @showPanel records
           @showRecords records
       
         App.mainRegion.show @layout
     
-    showAddRecord: ->
-      addRecordView = @getAddRecordView()
+    showAddRecord: (records) ->
+      addRecordView = @getAddRecordView records
       @layout.addrecordRegion.show addRecordView
     
     showPanel: (records) ->
@@ -26,8 +26,9 @@
       recordsView = @getRecordsView records
       @layout.recordsRegion.show recordsView
     
-    getAddRecordView: ->
+    getAddRecordView: (records) ->
       new List.AddRecord
+        collection: records
     
     getRecordsView: (records) ->
       new List.Records
