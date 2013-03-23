@@ -6,9 +6,13 @@
 		regions:
 			panelRegion: "#panel-region"
 			recordsRegion: "#records-region"
+			addrecordRegion: "#addrecord-region"
 	
 	class List.Panel extends App.Views.ItemView
 		template: "records/list/templates/_panel"
+	
+	class List.AddRecord extends App.Views.ItemView
+		template: "records/list/templates/_add"		
 	
 	class List.Record extends App.Views.ItemView
 		template: "records/list/templates/_record"

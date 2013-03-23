@@ -6,3 +6,12 @@
     @include border-radius(5px);    
     @include box-shadow(rgba(0,0,0,0.1) 8px 8px 8px);
 }
+
+#addrecord-region {
+    overflow: hidden;
+    
+    #add_button {
+        float: right;
+        margin-bottom: 10px;
+    }
+}
