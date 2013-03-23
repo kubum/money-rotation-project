@@ -1,8 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url("http://fonts.googleapis.com/css?family=PT+Sans");
 
+html, body {
+    height: 100%;
+}
 body {
-    padding-top: 40px;
-    padding-bottom: 40px;
     background: url('../assets/wood_pattern.png');
 }
 a {
@@ -16,7 +17,25 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'PT Sans', sans-serif;
 }
-
+#footer, .decoration {
+    background: url('../assets/dark_brick_wall.png');
+}
+#wrap {
+    height: auto !important;
+    margin: 0 auto -60px;
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 50px 50px -50px #3F3F3F;
+       -moz-box-shadow: inset 0 50px 50px -50px #3F3F3F;
+            box-shadow: inset 0 50px 50px -50px #3F3F3F;
+            
+    .decoration {
+        height: 5px;
+    }
+    
+    .container {
+        padding-top: 40px;    
+    }
+}
 // Header
 #header {
     text-align: center;
@@ -34,7 +53,23 @@ h1, h2, h3, h4, h5, h6 {
         color: #6D6D6B;
     }
 }
-
+// Footer
+#push, #footer {
+    height: 60px;
+}
+#footer {
+   -webkit-box-shadow: inset 0 20px 20px -20px #707070;
+      -moz-box-shadow: inset 0 20px 20px -20px #707070;
+           box-shadow: inset 0 20px 20px -20px #707070;
+    
+    font-family: 'PT Sans', sans-serif;
+    color: #ACACAC;
+    
+    .container {
+        text-align: right;
+        line-height: 60px
+    }
+}
 // Alerts
 .alerts {
     margin: 0 auto;
