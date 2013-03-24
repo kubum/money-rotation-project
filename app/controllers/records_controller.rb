@@ -1,8 +1,8 @@
 class RecordsController < ApplicationController
-  # before_filter :authenticate_user!
+  before_filter :authenticate_user!
   
   def index
-    @records = Record.all
+    @records = current_user.records
   end
   
   def show
@@ -10,7 +10,7 @@ class RecordsController < ApplicationController
   end
   
   def create
-    @record = Record.create(params[:record])
+    @record = current_user.records.create(params[:record])
     
     if @record.save
       render :json => @record
