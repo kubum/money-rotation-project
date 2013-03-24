@@ -1,7 +1,7 @@
 @Page.module "RecordsApp.List", (List, App, Backbone, Marionette, $, _) ->
   
   class List.AddRecord extends App.Views.ItemView
-    template: "records/list/templates/_add"
+    template: JST["backbone/modules/records/list/templates/_add"]
     events:
       'click #add_button': 'showAddRecordForm'
       'click': 'hideAddRecordForm'

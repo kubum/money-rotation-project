@@ -1,7 +1,7 @@
 @Page.module "HeaderApp.List", (List, App, Backbone, Marionette, $, _) ->
   
   class List.Header extends App.Views.ItemView
-    template: "header/list/templates/_header"
+    template: JST["backbone/modules/header/list/templates/_header"]
     tagName: "button"  
     events:
       'click': 'navigate'  
@@ -17,7 +17,7 @@
       App.navigate('#' + @model.get('url'), trigger: true)
   
   class List.Headers extends App.Views.CompositeView
-    template: "header/list/templates/headers"
+    template: JST["backbone/modules/header/list/templates/headers"]
     itemView: List.Header
     itemViewContainer: "#navigation div"
     events:

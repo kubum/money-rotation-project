@@ -3,14 +3,13 @@
   List.Controller =
     
     listRecords: ->
-      App.request "record:entities", (records) =>
+      @layout = @getLayoutView()
       
-        @layout = @getLayoutView()
-      
+      App.request "record:entities", (records) =>            
         @layout.on "show", =>
           @showAddRecord records
-          @showPanel records
           @showRecords records
+          @showPanel records
       
         App.mainRegion.show @layout
     
@@ -26,12 +25,20 @@
       recordsView = @getRecordsView records
       @layout.recordsRegion.show recordsView
     
+    showPagination: (records) ->
+      paginationView = @getPaginationView records
+      @layout.paginationRegion.show paginationView
+    
     getAddRecordView: (records) ->
       new List.AddRecord
         collection: records
     
     getRecordsView: (records) ->
       new List.Records
+        collection: records
+    
+    getPaginationView: (records) ->
+      new List.Pagination
         collection: records
       
     getPanelView: (records) ->
