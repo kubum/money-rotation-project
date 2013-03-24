@@ -5,10 +5,11 @@
     listRecords: ->
       @layout = @getLayoutView()
       
-      App.request "record:entities", (records) =>            
+      App.request "record:entities:paginated", (records) =>            
         @layout.on "show", =>
           @showAddRecord records
           @showRecords records
+          @showPagination records
           @showPanel records
       
         App.mainRegion.show @layout

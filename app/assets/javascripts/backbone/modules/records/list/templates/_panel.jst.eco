@@ -1,1 +1,1 @@
-Total Users: <%= @items.length %>
+Total records: <%= @state.totalRecords %>

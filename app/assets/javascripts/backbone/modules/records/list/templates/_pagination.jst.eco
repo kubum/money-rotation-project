@@ -1,0 +1,26 @@
+<ul>
+<% if @pagination.state.currentPage != 1: %>
+    <li id="prev">
+<% else: %>
+    <li id="prev" class="disabled">
+<% end %>
+        <a href="#"><span>&laquo;</span></a>
+    </li>
+
+<% for page in [1..@pagination.state.totalPages]: %>
+    <% if page == @pagination.state.currentPage: %>
+        <li class="active" >
+    <% else: %>
+        <li>
+    <% end %>
+    <a href="#"><%= page %></a></li>
+<% end %>
+
+<% if @pagination.state.currentPage != @pagination.state.totalPages: %>
+    <li id="next">
+<% else: %>
+    <li id="next" class="disabled">
+<% end %>
+        <a href="#"><span>&raquo;</span></a>
+    </li>
+</ul>

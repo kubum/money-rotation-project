@@ -13,8 +13,7 @@
     
     hideAddRecordForm: (e) ->
       container = $("#add_form")
-    
-      if container.is(":visible") && container.has(e.target).length == 0   
+      if container.is(":visible") && !container.is(e.target) && container.has(e.target).length == 0   
         @touchForm()    
     
     touchForm: ->
@@ -36,7 +35,7 @@
         comment: $("#new_record_comment").val()
         amount: $("#new_record_amount").val()
       
-      @collection.create attributes,
+      @collection.fullCollection.create attributes,
         wait: true
         success: @successAdded
         error: @handleError
