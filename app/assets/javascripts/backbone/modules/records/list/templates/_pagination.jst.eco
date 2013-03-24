@@ -4,7 +4,7 @@
 <% else: %>
     <li id="prev" class="disabled">
 <% end %>
-        <a href="#"><span>&laquo;</span></a>
+        <span>&laquo;</span>
     </li>
 
 <% for page in [1..@pagination.state.totalPages]: %>
@@ -13,7 +13,7 @@
     <% else: %>
         <li>
     <% end %>
-    <a href="#"><%= page %></a></li>
+            <span><%= page %></span></li>
 <% end %>
 
 <% if @pagination.state.currentPage != @pagination.state.totalPages: %>
@@ -21,6 +21,6 @@
 <% else: %>
     <li id="next" class="disabled">
 <% end %>
-        <a href="#"><span>&raquo;</span></a>
+        <span>&raquo;</span>
     </li>
 </ul>

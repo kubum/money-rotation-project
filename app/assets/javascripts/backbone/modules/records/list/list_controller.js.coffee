@@ -4,7 +4,7 @@
     
     listRecords: ->
       @layout = @getLayoutView()
-      
+               
       App.request "record:entities:paginated", (records) =>            
         @layout.on "show", =>
           @showAddRecord records

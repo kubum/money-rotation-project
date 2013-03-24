@@ -51,7 +51,7 @@
       else if $(e.target).parent().is('#next')
         @collection.getNextPage()
       else
-        @collection.getPage(e.target.text)
+        @collection.getPage($(e.target).text())
         
       @render()
       

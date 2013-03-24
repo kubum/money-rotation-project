@@ -63,7 +63,10 @@
 }
 
 #pagination-region {
-    li.disabled a {
+    li {
+        cursor: pointer;
+    }
+    li.disabled span {
         background: #E8E8E8;
     }
 }
