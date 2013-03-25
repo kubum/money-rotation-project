@@ -11,10 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324185656) do
+ActiveRecord::Schema.define(:version => 20130325093429) do
 
   create_table "records", :force => true do |t|
     t.integer  "user_id",                   :null => false
+    t.string   "flow",                      :null => false
     t.integer  "amount",     :default => 0, :null => false
     t.string   "comment"
     t.datetime "created_at",                :null => false

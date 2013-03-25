@@ -6,7 +6,6 @@
     model: Entities.Record
     url: '/api/records'
   
-  # a = new Page.Entities.RecordsPaginated
   class Entities.RecordsPaginated extends Backbone.PageableCollection
     model: Entities.Record
     url: '/api/records'
@@ -15,7 +14,7 @@
     state:
       firstPage: 1
       currentPage: 1
-      pageSize: 5
+      pageSize: 2
   
   API =
     getRecordEntities: (cb) ->

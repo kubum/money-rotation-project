@@ -1,6 +1,7 @@
 @import "compass/css3";
 
-#records-region {
+#records-region, 
+#pagination-region .pagination ul {
     background: #FFFFFF;
     
     @include border-radius(5px);    
@@ -54,19 +55,29 @@
                 ul {
                     margin-bottom: 0;
                 }
-            }            
-            input[type="text"] {
-                width: 285px;
+            }  
+            input[type="text"] { width: 285px; }
+            .input-prepend input[type="text"] { width: 258px; }
+            
+            .flow {
+                margin-bottom: 10px;
+                margin-left: 5px;
+                
+                label {
+                    padding-top: 0px;
+                }
             }
         }
     }
 }
 
 #pagination-region {
-    li {
-        cursor: pointer;
-    }
-    li.disabled span {
-        background: #E8E8E8;
+    ul {    
+        li {
+            cursor: pointer;
+        }
+        li.disabled span {
+            background: #E8E8E8;
+        }
     }
 }

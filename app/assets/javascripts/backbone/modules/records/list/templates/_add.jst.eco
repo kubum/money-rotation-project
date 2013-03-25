@@ -17,8 +17,22 @@
         </div>
 
         <input type="text" name="comment" id="new_record_comment" placeholder="Spend for" />
-        <input type="text" name="amount" id="new_record_amount" placeholder="Amount (&pound;)" />
-
+        <div class="input-prepend">
+          <span class="add-on">&pound;</span>
+          <input type="text" name="amount" id="new_record_amount" placeholder="Amount" />
+        </div>        
+        
+        <div class="flow">
+            <label class="radio inline">
+              <input type="radio" name="flow" value="income" checked />
+              Income
+            </label>
+            <label class="radio inline">
+              <input type="radio" name="flow" value="expense">
+              Expense
+            </label>
+        </div>
+        
         <input type="submit" value="Add" class="btn" />
     </form>
 </div>

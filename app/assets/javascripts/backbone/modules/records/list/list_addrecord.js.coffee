@@ -31,9 +31,10 @@
       
       $('#new_record .errors').hide()
       
-      attributes = 
+      attributes =
         comment: $("#new_record_comment").val()
         amount: $("#new_record_amount").val()
+        flow: $("#new_record input[type='radio'][name='flow']:checked").val()
       
       @collection.fullCollection.create attributes,
         wait: true
