@@ -17,6 +17,10 @@ end
 gem 'jquery-rails'
 gem 'turbolinks'
 
+group :development do
+  gem "better_errors"
+end
+
 # RSpec
 group :test, :development do
   gem "rspec-rails"

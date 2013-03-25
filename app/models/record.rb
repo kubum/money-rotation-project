@@ -6,4 +6,7 @@ class Record < ActiveRecord::Base
   validates :flow, :inclusion => { :in => %w(income expense) }
   
   belongs_to :user
+  
+  scope :income, where(:flow => "income")
+  scope :expense, where(:flow => "expense")
 end

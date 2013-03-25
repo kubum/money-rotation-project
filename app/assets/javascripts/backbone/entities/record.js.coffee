@@ -24,9 +24,11 @@
         success: ->
           cb records
           
-    getRecordEntitiesPaginated: (cb) ->
+    getRecordEntitiesPaginated: (cb, flow) ->
       records = new Entities.RecordsPaginated
       records.fetch
+        data:
+          flow: flow
         success: ->
           cb records
     
@@ -35,3 +37,9 @@
     
   App.reqres.addHandler "record:entities:paginated", (cb) ->
     API.getRecordEntitiesPaginated cb
+    
+  App.reqres.addHandler "record:entities:paginated:income", (cb) ->
+    API.getRecordEntitiesPaginated cb, "income"
+
+  App.reqres.addHandler "record:entities:paginated:expense", (cb) ->
+    API.getRecordEntitiesPaginated cb, "expense"

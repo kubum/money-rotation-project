@@ -2,7 +2,13 @@ class RecordsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @records = current_user.records
+    if !params[:flow].nil? && params[:flow] == "income"
+      @records = current_user.records.income
+    elsif !params[:flow].nil? && params[:flow] == "expense"
+      @records = current_user.records.expense
+    else !params[:flow].nil? && params[:flow] == "income"
+      @records = current_user.records
+    end
   end
   
   def show
