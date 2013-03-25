@@ -5,6 +5,7 @@
   class Entities.RecordsCollection extends Entities.Collection
     model: Entities.Record
     url: '/api/records'
+    idAttribute: 'id'
   
   class Entities.RecordsPaginated extends Backbone.PageableCollection
     model: Entities.Record

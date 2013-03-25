@@ -6,7 +6,7 @@ class RecordsController < ApplicationController
   end
   
   def show
-    respond_with Record.find(params[:id])
+
   end
   
   def create
@@ -24,6 +24,7 @@ class RecordsController < ApplicationController
   end
   
   def destroy
-    respond_with Record.destroy(params[:id])
+    @record = current_user.records.find(params[:id])
+    @record.destroy
   end
 end

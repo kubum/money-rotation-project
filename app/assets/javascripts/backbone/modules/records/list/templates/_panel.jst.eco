@@ -1,1 +1,1 @@
-Total records: <%= @state.totalRecords %>
+Total records: <%= if @state.totalRecords == null then 0 else @state.totalRecords %>

@@ -1,2 +1,3 @@
 <td><%= @comment %></td>
 <td><%= @amount %></td>
+<td class="delete"><a href="#">Delete</a></td>

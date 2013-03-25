@@ -14,6 +14,7 @@
     
     initialize: ->
       @collection.fullCollection.on('add', @render, @)
+      @collection.fullCollection.on('destroy', @render, @)
       
     render: ->
       $(@el).html(@template(state: @collection.state))
@@ -21,6 +22,14 @@
   class List.Record extends App.Views.ItemView
     template: JST["backbone/modules/records/list/templates/_record"]
     tagName: "tr"
+    events:      
+      'click .delete': 'deleteRecord'
+          
+    deleteRecord: ->
+      @model.destroy
+        wait: true
+            
+      false
   
   class List.Empty extends App.Views.ItemView
     template: JST["backbone/modules/records/list/templates/_empty"]
@@ -31,7 +40,7 @@
     itemView: List.Record
     emptyView: List.Empty
     itemViewContainer: "tbody"
-    
+  
   class List.Pagination extends App.Views.ItemView
     template: JST["backbone/modules/records/list/templates/_pagination"]
     events:
@@ -39,11 +48,15 @@
             
     initialize: ->
       @collection.fullCollection.on('add', @render, @)
+      @collection.fullCollection.on('destroy', @render, @)
+      @collection.fullCollection.on('destroy', @changePage, @)
         
     render: ->
       if @collection.state.totalPages > 1
         $(@el).addClass("pagination pagination-centered")
         $(@el).html(@template(pagination: @collection))
+      else
+        @$el.html("")
         
     pageSelect: (e) ->
       if $(e.target).parent().is('#prev')
@@ -56,3 +69,6 @@
       @render()
       
       false
+    
+    changePage: ->  
+      @collection.getPage(@collection.state.currentPage)

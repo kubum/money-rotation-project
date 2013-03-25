@@ -1,5 +1,25 @@
 @import "compass/css3";
 
+#records-region {
+    table {
+        tbody {
+            td.delete {
+                width: 60px;
+                text-align: center;
+                
+                a {
+                    text-decoration: none;
+                    padding: 2px 5px;
+                }
+                a:hover {
+                    background: #C20019;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
 #records-region, 
 #pagination-region .pagination ul {
     background: #FFFFFF;
