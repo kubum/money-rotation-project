@@ -1,4 +1,9 @@
 <div id="addrecord-region"></div>
-<div id="records-region"></div>
+
+<div class="row-fluid">
+    <div id="flow-region" class="span3"></div>
+    <div id="records-region" class="span9"></div>
+</div>
+
 <div id="pagination-region"></div>
 <div id="panel-region"></div>

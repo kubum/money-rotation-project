@@ -21,7 +21,8 @@
 }
 
 #records-region, 
-#pagination-region .pagination ul {
+#pagination-region .pagination ul,
+#flow-region {
     background: #FFFFFF;
     
     @include border-radius(5px);    
@@ -98,6 +99,18 @@
         }
         li.disabled span {
             background: #E8E8E8;
+        }
+    }
+}
+
+#flow-region {
+    .well {
+        padding: 8px 0; 
+        margin-bottom: 0;
+        border: 0px;
+        
+        i {
+            margin-right: 5px;
         }
     }
 }

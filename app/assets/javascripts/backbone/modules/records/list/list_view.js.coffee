@@ -5,6 +5,7 @@
     
     regions:
       panelRegion: "#panel-region"
+      flowRegion: "#flow-region"
       recordsRegion: "#records-region"
       addrecordRegion: "#addrecord-region"
       paginationRegion: "#pagination-region"

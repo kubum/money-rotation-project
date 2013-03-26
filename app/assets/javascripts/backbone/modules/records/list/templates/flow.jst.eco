@@ -1,0 +1,7 @@
+<div class="well">
+    <ul class="nav nav-list">
+      <li><a href="#records"><i class="icon-home"></i>All</a></li>
+      <li><a href="#records/income"><i class="icon-plus-sign"></i>Income</a></li>
+      <li><a href="#records/expense"><i class="icon-minus-sign"></i>Expense</a></li>
+    </ul>
+</div>
