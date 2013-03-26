@@ -6,10 +6,26 @@
       'click #add_button': 'showAddRecordForm'
       'click': 'hideAddRecordForm'
       'submit #new_record': 'createRecord'
-  
+          
+    serializeData: ->
+      currentFlow: ->
+        Backbone.history.fragment.split("/").pop()
+            
     showAddRecordForm: (e) ->
       e.stopPropagation()
-      @touchForm()      
+      @touchForm()
+      
+      radio = @$el.find("#new_record input[type='radio'][name='flow']")
+      
+      if @currentFlow() == "income" || @currentFlow() == "expense"
+        if @currentFlow() == "income" then $("#new_record_flow_income").attr('checked', true)
+        if @currentFlow() == "expense" then $("#new_record_flow_expense").attr('checked', true)
+          
+        radio.attr('disabled', true)
+      else
+        radio.attr('disabled', false)
+      
+      console.log(@$el)
     
     hideAddRecordForm: (e) ->
       container = $("#add_form")
@@ -62,4 +78,7 @@
         (id, element) -> $(element).val("")          
       )
       # Success info
-      $("#add_success").toggle('fast').delay(2000).toggle('fast');
+      $("#add_success").toggle('fast').delay(2000).toggle('fast')
+      
+    currentFlow: ->
+      Backbone.history.fragment.split("/").pop()

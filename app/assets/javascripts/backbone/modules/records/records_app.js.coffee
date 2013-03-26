@@ -10,7 +10,7 @@
       RecordsApp.List.Controller.listRecords()
     
     listRecordsByFlow: (flow) ->  
-      RecordsApp.List.Controller.listRecordsByFlow(flow)
+      RecordsApp.List.Controller.listRecordsByFlow(flow)  
   
   App.addInitializer ->
     new RecordsApp.Router

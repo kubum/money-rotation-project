@@ -11,24 +11,32 @@
     model: Entities.Record
     url: '/api/records'
     mode: "client"
-    
+      
     state:
       firstPage: 1
       currentPage: 1
-      pageSize: 2
-  
+      pageSize: 5
+
+    calculateIncome: ->
+      @fullCollection.where({flow: "income"}).reduce ((memo, value) ->
+        memo + value.get("amount")
+      ), 0
+    
+    calculateExpense: ->
+      @fullCollection.where({flow: "expense"}).reduce ((memo, value) ->
+        memo + value.get("amount")
+      ), 0
+    
   API =
     getRecordEntities: (cb) ->
       records = new Entities.RecordsCollection
       records.fetch
         success: ->
           cb records
-          
-    getRecordEntitiesPaginated: (cb, flow) ->
+    
+    getRecordEntitiesPaginated: (cb) ->
       records = new Entities.RecordsPaginated
       records.fetch
-        data:
-          flow: flow
         success: ->
           cb records
     
@@ -38,8 +46,3 @@
   App.reqres.addHandler "record:entities:paginated", (cb) ->
     API.getRecordEntitiesPaginated cb
     
-  App.reqres.addHandler "record:entities:paginated:income", (cb) ->
-    API.getRecordEntitiesPaginated cb, "income"
-
-  App.reqres.addHandler "record:entities:paginated:expense", (cb) ->
-    API.getRecordEntitiesPaginated cb, "expense"

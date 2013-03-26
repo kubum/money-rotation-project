@@ -9,7 +9,7 @@
       recordsRegion: "#records-region"
       addrecordRegion: "#addrecord-region"
       paginationRegion: "#pagination-region"
-  
+        
   class List.Panel extends App.Views.ItemView
     template: JST["backbone/modules/records/list/templates/_panel"]
     
@@ -51,8 +51,14 @@
       @collection.fullCollection.on('add', @render, @)
       @collection.fullCollection.on('destroy', @render, @)
       @collection.fullCollection.on('destroy', @changePage, @)
-        
-    render: ->
+      
+      @collection.fullCollection.on('add', @refreshFlow, @)
+      @collection.fullCollection.on('destroy', @refreshFlow, @)
+      
+    refreshFlow: ->
+      List.Controller.showFlow()
+              
+    render: ->        
       if @collection.state.totalPages > 1
         $(@el).addClass("pagination pagination-centered")
         $(@el).html(@template(pagination: @collection))

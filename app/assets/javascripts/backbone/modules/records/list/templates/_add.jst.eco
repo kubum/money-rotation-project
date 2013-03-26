@@ -24,11 +24,11 @@
         
         <div class="flow">
             <label class="radio inline">
-              <input type="radio" name="flow" value="income" checked />
+              <input type="radio" name="flow" value="income" id="new_record_flow_income" checked />
               Income
             </label>
             <label class="radio inline">
-              <input type="radio" name="flow" value="expense">
+              <input type="radio" name="flow" value="expense" id="new_record_flow_expense" />
               Expense
             </label>
         </div>
