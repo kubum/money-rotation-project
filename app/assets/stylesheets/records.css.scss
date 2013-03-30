@@ -6,7 +6,7 @@
         
         tbody {
             td.delete {
-                width: 60px;
+                width: 80px;
                 text-align: center;
                 
                 a {
@@ -16,6 +16,11 @@
                 a:hover {
                     background: #C20019;
                     color: #FFFFFF;
+                    
+                    i {
+                        color: #FFFFFF;
+                        background-image: url(/assets/twitter/bootstrap/glyphicons-halflings-white.png);
+                    }
                 }
             }
         }
