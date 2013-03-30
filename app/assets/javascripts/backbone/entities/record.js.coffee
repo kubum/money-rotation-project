@@ -16,6 +16,8 @@
       firstPage: 1
       currentPage: 1
       pageSize: 5
+      sortKey: 'id'
+      order: 1
 
     calculateIncome: ->
       @fullCollection.where({flow: "income"}).reduce ((memo, value) ->

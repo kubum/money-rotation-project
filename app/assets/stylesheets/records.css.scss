@@ -5,27 +5,35 @@
         margin-bottom: 0px;
         
         tbody {
-            td.amount {
-                width: 100px;
+            tr.income {
+                background-color: #F6FFF4;
             }
-            td.date {
-                width: 150px;
+            tr.expense {
+                background-color: #FFEAEC;
             }
-            td.delete {
-                width: 80px;
-                text-align: center;
-                
-                a {
-                    text-decoration: none;
-                    padding: 2px 5px;
+            tr {
+                td.amount {
+                    width: 100px;
                 }
-                a:hover {
-                    background: #C20019;
-                    color: #FFFFFF;
-                    
-                    i {
+                td.date {
+                    width: 150px;
+                }
+                td.delete {
+                    width: 80px;
+                    text-align: center;
+
+                    a {
+                        text-decoration: none;
+                        padding: 2px 5px;
+                    }
+                    a:hover {
+                        background: #C20019;
                         color: #FFFFFF;
-                        background-image: url(/assets/twitter/bootstrap/glyphicons-halflings-white.png);
+
+                        i {
+                            color: #FFFFFF;
+                            background-image: url(/assets/twitter/bootstrap/glyphicons-halflings-white.png);
+                        }
                     }
                 }
             }
@@ -36,7 +44,7 @@
 #records-region, 
 #pagination-region .pagination ul,
 #flow-region,
-#panel-region {
+#panel-region div {
     background: #FFFFFF;
     
     @include border-radius(5px);    
@@ -114,12 +122,16 @@
 }
 
 #pagination-region {
-    ul {    
-        li {
-            cursor: pointer;
-        }
-        li.disabled span {
-            background: #E8E8E8;
+    .pagination {
+        margin-bottom: 20px;
+        
+        ul {    
+            li {
+                cursor: pointer;
+            }
+            li.disabled span {
+                background: #E8E8E8;
+            }
         }
     }
 }
@@ -137,14 +149,18 @@
 }
 
 #panel-region {
+    overflow: hidden;
     margin-top: 10px;
-    padding: 2px 10px;
     font-size: 12px;
-    float: right;
-    line-height: 20px;
     
-    i {
-        margin: 0px;
-        padding: 0px;
+    div {        
+        float: right;
+        padding: 2px 10px;
+        line-height: 20px;
+                
+        i {
+            margin: 0px;
+            padding: 0px;
+        }
     }
 }

@@ -24,8 +24,6 @@
         radio.attr('disabled', true)
       else
         radio.attr('disabled', false)
-      
-      console.log(@$el)
     
     hideAddRecordForm: (e) ->
       container = $("#add_form")

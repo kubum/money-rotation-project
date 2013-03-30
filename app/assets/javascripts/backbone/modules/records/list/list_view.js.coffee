@@ -26,6 +26,10 @@
     events:      
       'click .delete': 'deleteRecord'
           
+    
+    onRender: ->
+      @$el.addClass(@model.get('flow'))
+      
     deleteRecord: ->
       @model.destroy
         wait: true

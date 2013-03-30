@@ -5,5 +5,5 @@
     <div id="records-region" class="span9"></div>
 </div>
 
-<div id="pagination-region"></div>
 <div id="panel-region"></div>
+<div id="pagination-region"></div>
