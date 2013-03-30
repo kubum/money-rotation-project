@@ -1,9 +1,9 @@
 <table class="table table-striped table-bordered">
 	<thead>
 		<tr>
-			<th>Comment</th>
-			<th>Amount</th>
-			<th>Date</th>
+			<th><i class="icon-comment"></i> Comment</th>
+			<th><i class="icon-shopping-cart"></i> Amount</th>
+			<th><i class="icon-time"></i> Date</th>
 			<th>&nbsp;</th>
 		</tr>
 	</thead>
