@@ -18,7 +18,7 @@
       @collection.fullCollection.on('destroy', @render, @)
       
     render: ->
-      $(@el).html(@template(state: @collection.state))
+      $(@el).html(@template(totalRecords: @collection.state.totalRecords))
   
   class List.Record extends App.Views.ItemView
     template: JST["backbone/modules/records/list/templates/_record"]

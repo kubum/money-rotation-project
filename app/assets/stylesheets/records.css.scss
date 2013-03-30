@@ -29,7 +29,8 @@
 
 #records-region, 
 #pagination-region .pagination ul,
-#flow-region {
+#flow-region,
+#panel-region {
     background: #FFFFFF;
     
     @include border-radius(5px);    
@@ -126,5 +127,18 @@
         i {
             margin-right: 5px;
         }
+    }
+}
+
+#panel-region {
+    margin-top: 10px;
+    padding: 2px 10px;
+    font-size: 12px;
+    float: right;
+    line-height: 20px;
+    
+    i {
+        margin: 0px;
+        padding: 0px;
     }
 }

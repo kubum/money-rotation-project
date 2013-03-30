@@ -1,1 +1,2 @@
-Total records: <%= if @state.totalRecords == null then 0 else @state.totalRecords %>
+<i class="icon icon-th-list"></i>
+Total records: <b><%= if @totalRecords == null then 0 else @totalRecords %></b>
