@@ -20,9 +20,7 @@ class RecordsController < ApplicationController
   def create
     @record = current_user.records.create(params[:record])
     
-    if @record.save
-      render :json => @record
-    else
+    unless @record.save
       render :json => { :errors => @record.errors.full_messages }, :status => 422
     end
   end
