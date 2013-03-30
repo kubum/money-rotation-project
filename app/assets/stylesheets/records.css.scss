@@ -5,6 +5,12 @@
         margin-bottom: 0px;
         
         tbody {
+            td.amount {
+                width: 100px;
+            }
+            td.date {
+                width: 150px;
+            }
             td.delete {
                 width: 80px;
                 text-align: center;

@@ -3,6 +3,7 @@
 		<tr>
 			<th>Comment</th>
 			<th>Amount</th>
+			<th>Date</th>
 			<th>&nbsp;</th>
 		</tr>
 	</thead>

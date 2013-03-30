@@ -9,6 +9,8 @@ class RecordsController < ApplicationController
     else !params[:flow].nil? && params[:flow] == "income"
       @records = current_user.records
     end
+    
+    @records = @records.order("id DESC")
   end
   
   def show
