@@ -7,7 +7,8 @@
       'click': 'navigate'  
     
     onRender: ->
-      @$el.addClass("active") if App.getCurrentRoute() == @model.get('url')
+      currentRoute = App.getCurrentRoute().split("/")[0]
+      @$el.addClass("active") if currentRoute == @model.get('url')
       @$el.addClass("btn")
     
     navigate: ->
