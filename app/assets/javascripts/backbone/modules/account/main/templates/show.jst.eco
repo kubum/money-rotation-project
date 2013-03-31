@@ -1,1 +1,32 @@
-asd
+<div id="edit_account" class="region central_form">
+    <h3>Edit account</h3>
+
+    <form action="/users" class="edit_user" id="edit_user" method="post">
+        <input name="_method" type="hidden" value="put" />
+
+        <input type="text" name="user[email]" id="user_email" placeholder="Email" size="30" type="email" />
+        
+        <span class="help-block">Leave the <b>password</b> blank if you do not want to change it</span>
+        
+        <input type="password" name="user[password]" id="user_password" placeholder="Password" size="30" autocomplete="off" />        
+        <input type="password" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Password confirmation" size="30" autocomplete="off" />
+        
+        <span class="help-block">We need your current password to confirm your changes:</span>
+        <input type="password" name="user[current_password]" id="user_current_password" placeholder="Current password" size="30" autocomplete="off" />
+        
+        <br />
+        
+        <input  name="commit" type="submit" value="Update" class="btn" />
+    </form>
+</div>
+
+<div id="cancel_account" class="region central_form">
+    <h3>Cancel my account</h3>
+
+    <p>Are you unhappy?</p>
+     
+    <form action="/users" class="button_to" method="post">
+        <input name="_method" type="hidden" value="delete" />
+        <input data-confirm="Are you sure?" type="submit" value="Yes, cancel my account" class="btn btn-danger" />
+    </form>
+</div>

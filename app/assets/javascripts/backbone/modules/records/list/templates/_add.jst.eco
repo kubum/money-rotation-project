@@ -7,7 +7,7 @@
     <span>Success!</span> Record was successfully added
 </div>
 
-<div id="add_form" class="region">
+<div id="add_form" class="region central_form">
     <h3>Add record</h3>
 
     <form id="new_record">

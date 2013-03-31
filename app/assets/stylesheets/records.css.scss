@@ -69,7 +69,7 @@
     #add_success, #add_form {
         display: none;
         width: 300px;
-        margin: 0 auto;    
+        margin: 0 auto 20px auto;    
     }
     
     #add_success {   
@@ -80,43 +80,6 @@
         }
         p {
             margin: 0px;
-        }
-    }
-    
-    #add_form {
-        margin-bottom: 20px;
-        padding: 2px 20px 2px 20px;
-        background: #E6E6E6;
-        
-        form {
-            .success, .errors {
-                display: none;    
-
-                h4 {
-                    margin-bottom: 5px;
-                }
-            }
-            .success {
-                p {
-                    margin-bottom: 0;
-                }
-            }
-            .errors {
-                ul {
-                    margin-bottom: 0;
-                }
-            }  
-            input[type="text"] { width: 285px; }
-            .input-prepend input[type="text"] { width: 258px; }
-            
-            .flow {
-                margin-bottom: 10px;
-                margin-left: 5px;
-                
-                label {
-                    padding-top: 0px;
-                }
-            }
         }
     }
 }
