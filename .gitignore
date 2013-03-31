@@ -11,4 +11,8 @@
 # Ignore ChromeDriver log
 chromedriver.log
 
+# Mac OS X
 .DS_STORE
+
+# database.yml
+/config/database.yml

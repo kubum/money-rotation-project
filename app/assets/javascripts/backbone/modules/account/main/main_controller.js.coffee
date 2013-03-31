@@ -1,4 +1,4 @@
-@Page.module "StatisticsApp.Main", (Main, App, Backbone, Marionette, $, _) ->
+@Page.module "AccountApp.Main", (Main, App, Backbone, Marionette, $, _) ->
   
   Main.Controller =
     

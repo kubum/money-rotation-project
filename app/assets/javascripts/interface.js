@@ -12,4 +12,5 @@
 //= require_tree ./backbone/modules/header/list/templates
 //= require_tree ./backbone/modules/records/list/templates
 //= require_tree ./backbone/modules/statistics/main/templates
+//= require_tree ./backbone/modules/account/main/templates
 //= require_tree ./backbone/modules
