@@ -1,3 +1,4 @@
+//= require jquery.flot
 //= require twitter/bootstrap/modal
 //= require underscore
 //= require backbone
