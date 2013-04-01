@@ -33,4 +33,8 @@ class RecordsController < ApplicationController
     @record = current_user.records.find(params[:id])
     @record.destroy
   end
+  
+  def statistics
+    @records = current_user.records.order("created_at ASC")
+  end
 end

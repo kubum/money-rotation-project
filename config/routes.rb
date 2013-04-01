@@ -1,7 +1,9 @@
 MoneyRotationProject::Application.routes.draw do
 
   scope "api" do
-    resources :records
+    resources :records do
+      get 'statistics', :on => :collection
+    end
   end
   
   devise_for :users, :controllers => { 

@@ -1,0 +1,32 @@
+@import "compass/css3";
+
+.filter {
+    .well {
+        padding: 8px 0; 
+        margin-bottom: 0;
+        border: 0px;
+    }
+}
+
+.graph_container {
+	box-sizing: border-box;
+	width: 100%;
+	height: 450px;
+	padding: 20px 15px 15px 15px;
+	
+	background: #FFFFFF;
+    
+    @include border-radius(5px);    
+    @include box-shadow(rgba(0,0,0,0.1) 8px 8px 8px);
+}
+
+.graph_holder {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.legend table {
+	border-spacing: 5px;
+}

@@ -41,10 +41,17 @@
       records.fetch
         success: ->
           cb records
+          
+    getRecordStatistics: (cb) ->
+      $.get "/api/records/statistics", (records) ->
+        cb records
     
   App.reqres.addHandler "record:entities", (cb) ->
     API.getRecordEntities cb
     
   App.reqres.addHandler "record:entities:paginated", (cb) ->
     API.getRecordEntitiesPaginated cb
+    
+  App.reqres.addHandler "record:statistics", (cb) ->
+    API.getRecordStatistics cb
     

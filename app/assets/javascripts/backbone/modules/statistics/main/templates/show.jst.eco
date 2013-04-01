@@ -1,1 +1,20 @@
-asd
+<div class="row-fluid">
+    <div class="span3 filter">
+        <div class="well">
+            <ul class="nav nav-list">
+              <li>
+                <a href="#" id="by_week">This week</a>
+              </li>
+              <li>
+                <a href="#" id="by_month">This month</a> 
+              </li>
+              <li>
+                <a href="#" id="by_all">All the time</a> 
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="graph_container span9">
+        <div id="placeholder" class="graph_holder"></div>
+    </div>
+</div>

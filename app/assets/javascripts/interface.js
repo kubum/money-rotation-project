@@ -1,4 +1,5 @@
 //= require jquery.flot
+//= require jquery.flot.time
 //= require twitter/bootstrap/modal
 //= require underscore
 //= require backbone
