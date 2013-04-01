@@ -14,6 +14,7 @@
     methodToURL:
       'read': '/userinfo.json'
       'update': '/users.json'
+      'delete': '/users.json'
 
     sync: (method, model, options) ->
       options = options || {}

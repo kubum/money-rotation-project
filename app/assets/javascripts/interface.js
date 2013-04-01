@@ -1,3 +1,4 @@
+//= require twitter/bootstrap/modal
 //= require underscore
 //= require backbone
 //= require backbone.pageable

@@ -33,9 +33,24 @@
     <h3>Cancel my account</h3>
 
     <p>Are you unhappy?</p>
-     
-    <form action="/users" class="button_to" id="cancel_user" method="post">
-        <input name="_method" type="hidden" value="delete" />
-        <input data-confirm="Are you sure?" type="submit" value="Yes, cancel my account" class="btn btn-danger" />
-    </form>
+    
+    <a href="#cancelAccountModal" role="button" class="btn btn-danger" data-toggle="modal">
+        Yes, cancel my account
+    </a>
+</div>
+
+<!-- Cancel account modal -->
+<div id="cancelAccountModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Are you seriously?</h3>
+  </div>
+  <div class="modal-body">
+    <p>We will remove your account and all your personal data from the server.</p>
+    <p>The operation cannot be undone</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">No, it was a mistake</button>
+    <button class="btn btn-danger" id="cancel_user">Yes, cancel my account</button>
+  </div>
 </div>

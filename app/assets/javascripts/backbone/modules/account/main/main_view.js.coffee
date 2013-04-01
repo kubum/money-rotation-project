@@ -5,7 +5,7 @@
     
     events:
       "submit #edit_user": "editUser"
-      "submit #cancel_user": "cancelUser"
+      "click #cancel_user": "cancelUser"
     
     initialize: ->      
       @model.on('change', @render, @)
@@ -34,19 +34,17 @@
         console.log(response)
         
         errors = $.parseJSON(response.responseText).errors
-        
-        # console.log(errors)
-        
+                
         for id, message of errors
           $("#edit_user .errors ul").append("<li>" + message + "</li>")
 
         $('#edit_user .errors').slideDown('fast')
-        
-      # console.log(user)
-      # console.log(response)
-      console.log("error!")
-    
-    cancelUser: ->  
-      console.log("cancel")
+            
+    cancelUser: ->
+      @model.destroy
+        success: @successDestroy
         
       false
+      
+    successDestroy: (user, response) ->
+      window.location = "/users/sign_in"
