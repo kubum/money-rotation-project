@@ -1,7 +1,16 @@
+<div id="edit_success" class="success alert alert-success">
+    <span>Success!</span> User was successfully edited
+</div>
+
 <div id="edit_account" class="region central_form">
     <h3>Edit account</h3>
 
     <form action="/users" class="edit_user" id="edit_user" method="post">
+        <div class="errors alert alert-error">
+            <h4>Errors!</h4>
+            <ul></ul>
+        </div>
+    
         <input name="_method" type="hidden" value="put" />
 
         <input type="text" name="user[email]" id="user_email" placeholder="Email" size="30" type="email" />
@@ -25,7 +34,7 @@
 
     <p>Are you unhappy?</p>
      
-    <form action="/users" class="button_to" method="post">
+    <form action="/users" class="button_to" id="cancel_user" method="post">
         <input name="_method" type="hidden" value="delete" />
         <input data-confirm="Are you sure?" type="submit" value="Yes, cancel my account" class="btn btn-danger" />
     </form>

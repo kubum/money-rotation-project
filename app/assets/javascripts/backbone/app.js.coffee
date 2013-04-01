@@ -18,8 +18,6 @@
     mainRegion: "#main-region"
     footerRegion: "#footer-region"
   
-  # App.addInitializer ->
-  #
   
   App.on "initialize:after", (options) ->    
     if Backbone.history
