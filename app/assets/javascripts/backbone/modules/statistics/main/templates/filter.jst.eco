@@ -1,0 +1,13 @@
+<div class="well">
+    <ul class="nav nav-list">
+      <li>
+        <a href="#" id="by_week">This week</a>
+      </li>
+      <li>
+        <a href="#" id="by_month">This month</a> 
+      </li>
+      <li>
+        <a href="#" id="by_all">All the time</a> 
+      </li>
+    </ul>
+</div>

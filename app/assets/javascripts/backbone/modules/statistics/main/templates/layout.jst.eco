@@ -1,0 +1,4 @@
+<div class="row-fluid">
+    <div class="span3 filter" id="filter-region"></div>
+    <div class="graph_container span9" id="graph-region"></div>
+</div>

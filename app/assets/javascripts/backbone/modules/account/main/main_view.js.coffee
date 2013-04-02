@@ -31,7 +31,6 @@
     errorEdit: (user, response) ->
       if response.status == 422
         $('#edit_user .errors ul').html("")
-        console.log(response)
         
         errors = $.parseJSON(response.responseText).errors
                 
