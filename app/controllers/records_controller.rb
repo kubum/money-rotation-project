@@ -35,6 +35,7 @@ class RecordsController < ApplicationController
   end
   
   def statistics
-    @records = current_user.records.order("created_at ASC")
+    @income  = current_user.records.income.order("created_at ASC")
+    @expense = current_user.records.expense.order("created_at ASC")
   end
 end

@@ -3,8 +3,14 @@
   Main.Controller =
     
     show: ->
-      view = @getIndexView()
-      App.mainRegion.show view
+      current_user = App.request "get:current:user"
+      current_user.fetch()
+      
+      App.request "record:statistics", (records) => 
+        view = @getIndexView records, current_user
+        App.mainRegion.show view
     
-    getIndexView: ->
-      new Main.Show
+    getIndexView: (records, current_user) ->
+      new Main.Show 
+        records: records
+        current_user: current_user
