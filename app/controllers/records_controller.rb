@@ -12,11 +12,7 @@ class RecordsController < ApplicationController
     
     @records = @records.order("id DESC")
   end
-  
-  def show
-
-  end
-  
+    
   def create
     @record = current_user.records.create(params[:record])
     
