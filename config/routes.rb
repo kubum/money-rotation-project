@@ -1,7 +1,7 @@
 MoneyRotationProject::Application.routes.draw do
 
   scope "api" do
-    resources :records do
+    resources :records, :except => [:new, :show, :edit] do
       get 'statistics', :on => :collection
     end
   end
