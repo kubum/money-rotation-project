@@ -1,8 +1,14 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
-  factory :record, :class => 'Records' do
-    amount 1
-    comment "MyString"
+  factory :record do |f|
+    amount 100
+    sequence(:comment) { |n| "comment#{n}" }
+    
+    factory :record_income do |i|
+      flow "income"
+    end
+    
+    factory :record_expense do |i|
+      flow "expense"
+    end
   end
 end
