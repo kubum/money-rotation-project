@@ -77,6 +77,10 @@ h1, h2, h3, h4, h5, h6 {
     
     .container {
         text-align: right;
-        line-height: 60px
+        line-height: 60px;
+        
+        .description {
+            text-align: left;
+        }
     }
 }

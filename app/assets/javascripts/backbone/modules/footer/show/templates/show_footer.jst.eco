@@ -1,5 +1,8 @@
 <div id="footer">
 	<div class="container">
-		Application footer
+		<div class="row">
+          <div class="span9 description">Simple budget tracking system</div>
+          <div class="span3">Source code is available on <a href="http://github.com/kubum/money-rotation-project">github</a></div>
+        </div>
 	</div>
 </div>
