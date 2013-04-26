@@ -40,8 +40,8 @@
     toggleForm: ->
       $("#add_form").toggle("fast")
       
-    createRecord: ->
-      event.preventDefault()
+    createRecord: (e) ->
+      e.preventDefault()
       
       $('#new_record .errors').hide()
       
@@ -54,6 +54,8 @@
         wait: true
         success: @successAdded
         error: @handleError
+      
+      false
 
     handleError: (entry, response) ->     
       if response.status == 422
